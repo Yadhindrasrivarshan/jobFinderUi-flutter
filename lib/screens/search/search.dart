@@ -1,5 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:jobuiapp/screens/search/widgets/search_appbar.dart';
+import 'package:jobuiapp/screens/search/widgets/search_input.dart';
+import 'package:jobuiapp/screens/search/widgets/search_list.dart';
+import 'package:jobuiapp/screens/search/widgets/search_option.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
@@ -26,7 +30,12 @@ class SearchPage extends StatelessWidget {
             ),
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
-              children: [],
+              children: [
+                SearchAppbar(),
+                SearchInput(),
+                SearchOption(),
+                Expanded(child: SearchList())
+              ],
             )
           ],
         ));
